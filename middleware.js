@@ -8,9 +8,4 @@ export async function middleware() {
   return NextResponse.next();
 }
 
-export const config = {
-    // Run this middleware only in /api requests.
-    matcher: '/api/:path*',
-  }
-  
  
