@@ -1,11 +1,6 @@
-import { NextResponse } from 'next/server'
+export default async function middleware(req) {
+  const { pathname } = req.nextUrl
  
-export async function middleware() {
-  console.log('Inside middleware')
-  await new Promise(function (resolve) {
-    setTimeout(resolve, 250);
-  });
-  return NextResponse.next();
+  console.log(pathname)
 }
-
  
