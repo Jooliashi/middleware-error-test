@@ -5,6 +5,6 @@ export async function middleware() {
   await new Promise(function (resolve) {
     setTimeout(resolve, 250);
   });
-  return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 })
+  return NextResponse.next();
 }
  
